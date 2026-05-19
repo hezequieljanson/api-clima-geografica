@@ -7,6 +7,10 @@ Projeto em Node.js que expõe uma API REST para consultar informações geográf
 - `README.md` - documentação principal
 - `INTEGRANTES.md` - dados da equipe
 - `src/` - código-fonte da aplicação
+- `src/routes/` - definição das rotas HTTP e documentação Swagger dos endpoints
+- `src/controllers/` - handlers HTTP com delegação para os serviços
+- `src/services/` - integração com serviços externos e obtenção de dados
+- `src/utils/` - validações e padronização de erros
 - `tests/` - testes automatizados
 - `docs/postman_collection.json` - coleção Postman exportada
 
@@ -49,6 +53,7 @@ http://localhost:3000
 ```
 
 A rota raiz redireciona automaticamente para o Swagger em `/api-docs`. Na interface Swagger você pode:
+
 - 📖 Ver descrição detalhada de todos os endpoints
 - 🔍 Consultar parâmetros obrigatórios e opcionais
 - ▶️ Testar os endpoints diretamente (usando o botão "Try it out")

@@ -1,6 +1,6 @@
 {
   "name": "api-agregacao-climatico-geografico",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "API REST em Node.js para agregação de dados climáticos e geográficos de cidades brasileiras.",
   "main": "src/server.js",
   "scripts": {

@@ -1,5 +1,5 @@
-const express = require('express');
-const { getExternalHealth } = require('../services/healthService');
+const express = require("express");
+const { getHealth } = require("../controllers/healthController");
 
 const router = express.Router();
 
@@ -33,23 +33,6 @@ const router = express.Router();
  *                   type: string
  *                   example: Serviço de clima indisponível
  */
-router.get('/', async (req, res) => {
-  const health = await getExternalHealth();
-
-  if (health.healthy) {
-    return res.status(200).json({
-      status: 'healthy',
-      versao: '1.0.0',
-      timestamp: new Date().toISOString()
-    });
-  }
-
-  return res.status(200).json({
-    status: 'degraded',
-    versao: '1.0.0',
-    timestamp: new Date().toISOString(),
-    motivo: health.motivo
-  });
-});
+router.get("/", getHealth);
 
 module.exports = router;
